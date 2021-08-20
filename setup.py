@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setup(
     name="securityscorecard_api-woodtechie1428",
-    version="0.0.3",
+    version="0.0.4",
     author="Wood Techie",
     author_email="woodtechie1428@gmail.com",
     description="Python SDK for interacting with the SecurityScorecard API",
