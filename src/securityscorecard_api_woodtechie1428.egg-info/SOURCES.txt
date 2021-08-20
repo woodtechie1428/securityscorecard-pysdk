@@ -1,8 +1,11 @@
 README.md
 setup.py
 src/securityscorecard_api/__init__.py
+src/securityscorecard_api/_util.py
+src/securityscorecard_api/client.py
 src/securityscorecard_api/scores.py
 src/securityscorecard_api_woodtechie1428.egg-info/PKG-INFO
 src/securityscorecard_api_woodtechie1428.egg-info/SOURCES.txt
 src/securityscorecard_api_woodtechie1428.egg-info/dependency_links.txt
+src/securityscorecard_api_woodtechie1428.egg-info/requires.txt
 src/securityscorecard_api_woodtechie1428.egg-info/top_level.txt
