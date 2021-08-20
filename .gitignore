@@ -351,3 +351,8 @@ MigrationBackup/
 
 # Test Files
 simple.py
+
+# build and dist directories
+
+build/
+dist/
