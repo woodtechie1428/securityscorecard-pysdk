@@ -4,7 +4,7 @@ from setuptools import setup, find_packages
 with open("README.md", "r") as fh:
     long_description = fh.read()
 
-exec(open('securityscorecard_api/version.py').read())
+exec(open('src/securityscorecard_api/version.py').read())
 
 setup(
     name="securityscorecard_api-woodtechie1428",
