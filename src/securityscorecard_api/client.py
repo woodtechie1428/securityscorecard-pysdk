@@ -6,6 +6,9 @@ from securityscorecard_api._util import _Util
 
 
 class SecurityScorecardClient(Scores, _Util):
+    '''
+        Primary Client Class 
+    '''
     def __init__(self, api_token) -> None:
         self.session = session()
         self.session.headers = {

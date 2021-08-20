@@ -1,11 +1,14 @@
 from setuptools import setup, find_packages
 
+from securityscorecard_api.version import __version__
+
 with open("README.md", "r") as fh:
     long_description = fh.read()
 
+
 setup(
     name="securityscorecard_api-woodtechie1428",
-    version="0.0.4",
+    version=__version__,
     author="Wood Techie",
     author_email="woodtechie1428@gmail.com",
     description="Python SDK for interacting with the SecurityScorecard API",
