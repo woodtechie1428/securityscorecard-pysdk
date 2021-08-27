@@ -7,7 +7,7 @@ with open("README.md", "r") as fh:
 exec(open('src/securityscorecard_api/version.py').read())
 
 setup(
-    name="securityscorecard_api-woodtechie1428",
+    name="securityscorecard_api",
     version=__version__,
     author="Wood Techie",
     author_email="woodtechie1428@gmail.com",

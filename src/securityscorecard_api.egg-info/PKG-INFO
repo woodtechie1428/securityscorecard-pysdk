@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
-Name: securityscorecard-api-woodtechie1428
-Version: 0.0.5
+Name: securityscorecard-api
+Version: 0.0.6
 Summary: Python SDK for interacting with the SecurityScorecard API
 Home-page: https://github.com/woodtechie1428/securityscorecard-pysdk
 Author: Wood Techie
