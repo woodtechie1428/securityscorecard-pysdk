@@ -1,10 +1,11 @@
 
 from requests.sessions import session
+from securityscorecard_api.compliance import Compliance
 from securityscorecard_api.events import Events
 from securityscorecard_api.scores import Scores
 
 
-class SecurityScorecardClient(Scores, Events):
+class SecurityScorecardClient(Scores, Events, Compliance):
     '''
         Primary Client Class 
     '''
