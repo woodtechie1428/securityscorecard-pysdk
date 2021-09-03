@@ -1,11 +1,10 @@
 
-from requests.api import request
 from requests.sessions import session
+from securityscorecard_api.events import Events
 from securityscorecard_api.scores import Scores
-from securityscorecard_api._util import _Util
 
 
-class SecurityScorecardClient(Scores, _Util):
+class SecurityScorecardClient(Scores, Events):
     '''
         Primary Client Class 
     '''
@@ -15,3 +14,7 @@ class SecurityScorecardClient(Scores, _Util):
             "Accept": "application/json; charset=utf-8",
             "Authorization": "Token "+ api_token
         }
+
+    def _perform_get(self, api_url):
+        response = self.session.get(api_url, verify=False)
+        return (response.json())
