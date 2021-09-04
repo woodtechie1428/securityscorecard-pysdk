@@ -2,6 +2,11 @@
 
 A python SDK for interacting with the SecurityScorecard API
 
+## Installation
+```
+python -m pip install securityscorecard_api
+```
+
 ## Example 
 
 ```
