@@ -1,4 +1,4 @@
-name: Publish Python 🐍 distributions 📦 to PyPI and TestPyPI
+name: Publish Python 🐍 distributions 📦 to PyPI
 
 on:
   release:
@@ -6,7 +6,7 @@ on:
 
 jobs:
   build-n-publish:
-    name: Build and publish Python 🐍 distributions 📦 to PyPI and TestPyPI
+    name: Build and publish Python 🐍 distributions 📦 to PyPI
     runs-on: ubuntu-18.04
     
     steps:
@@ -16,6 +16,18 @@ jobs:
       with:
         python-version: 3.7
     
+    - name: Autobump version
+      run: |
+        # from refs/tags/v1.2.3 get 1.2.3
+        VERSION=$(echo $GITHUB_REF | sed 's#.*/v##')
+        PLACEHOLDER='__version__ = "develop"'
+        VERSION_FILE='src/securityscorecard_api/version2.py'
+        # ensure the placeholder is there. If grep doesn't find the placeholder
+        # it exits with exit code 1 and github actions aborts the build. 
+        grep "$PLACEHOLDER" "$VERSION_FILE"
+        sed -i "s/$PLACEHOLDER/__version__ = \"${VERSION}\"/g" "$VERSION_FILE"
+      shell: bash
+
     - name: Install pypa/build
       run: >-
         python -m
