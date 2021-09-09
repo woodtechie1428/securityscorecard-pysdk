@@ -1,5 +1,8 @@
 
 from requests.sessions import session
+import urllib3
+from urllib3.exceptions import InsecureRequestWarning
+urllib3.disable_warnings(InsecureRequestWarning)
 from securityscorecard_api.compliance import Compliance
 from securityscorecard_api.events import Events
 from securityscorecard_api.scores import Scores
